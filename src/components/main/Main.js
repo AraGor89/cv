@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
-import avatar from "../../assets/img/avatar.jpg";
 import About from "./../about/About";
 import Duties from "./../duties/Duties";
+import Avatar from "./../avatar/Avatar";
 import Skills from "./../skills/Skills";
 import Hobbies from "./../hobbies/Hobbies";
 import Contacts from "./../contacts/Contacts";
@@ -39,7 +39,7 @@ const Main = () => {
         size="medium"
         variant="outlined"
         onClick={handleExport}
-        sx={{ marginLeft: "15px" }}
+        sx={{ position: "fixed", top: "15px", left: "10px" }}
       >
         export file
       </Button>
@@ -64,18 +64,14 @@ const Main = () => {
               component="div"
               sx={{ background: "#d3d3d378", width: "400px", padding: "10px" }}
             >
-              <Typography
-                component="img"
-                src={avatar}
-                alt="avatar"
-                width="200px"
-                borderRadius="50%"
-                sx={{ margin: "0 auto", display: "flex" }}
-              />
+              <Avatar />
 
               <About headingsCss={headingsCss} />
+
               <Languages headingsCss={headingsCss} />
+
               <Hobbies headingsCss={headingsCss} />
+
               <Contacts headingsCss={headingsCss} />
             </Typography>
 

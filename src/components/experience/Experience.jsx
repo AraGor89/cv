@@ -17,7 +17,7 @@ const Experience = () => {
           </Typography>
           {"\n"}
           <Typography component="li">
-            REDKITE 2020 - present days {"\n"}
+            REDKITE 2020 - present {"\n"}
             <Typography component="ul">
               {"\t"}
               <Typography component="i">
