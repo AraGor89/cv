@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
+import mail from "../../assets/img/mail.png";
+import phone from "../../assets/img/phone.png";
 import logoLin from "../../assets/img/logoLin.png";
-import LocalPhoneTwoToneIcon from "@mui/icons-material/LocalPhoneTwoTone";
-import MarkEmailUnreadTwoToneIcon from "@mui/icons-material/MarkEmailUnreadTwoTone";
 
 const Contacts = ({ headingsCss }) => {
   return (
@@ -9,7 +9,6 @@ const Contacts = ({ headingsCss }) => {
       <Typography variant="h5" sx={headingsCss}>
         Contact info
       </Typography>
-      {"\n"}
       <Typography
         component="div"
         sx={{
@@ -19,25 +18,23 @@ const Contacts = ({ headingsCss }) => {
         }}
       >
         <Typography component="div" display="flex" marginBottom={1}>
-          <LocalPhoneTwoToneIcon />
+          <Typography component="img" src={phone} alt="phone" width={30} />
           <Typography component="span" marginLeft={1}>
             +374 94 899 926
           </Typography>
         </Typography>
-        {"\n"}
 
         <Typography component="div" display="flex" marginBottom={1}>
-          <MarkEmailUnreadTwoToneIcon />
+          <Typography component="img" src={mail} alt="mail" width={30} />
           <Typography component="span" marginLeft={1}>
             gorarakelyan1989@gmail.com
           </Typography>
         </Typography>
-        {"\n"}
 
         <Typography component="div" display="flex" alignItems="center">
           <Typography
-            width="25px"
-            height="25px"
+            width="30px"
+            height="30px"
             alt="logoLin"
             component="img"
             src={logoLin}
@@ -46,15 +43,13 @@ const Contacts = ({ headingsCss }) => {
             marginLeft={1}
             component="a"
             target="_blank"
-            sx={{ textDecoration: "none", color: "unset", fontSize: "14px" }}
+            sx={{ textDecoration: "none", color: "unset" }}
             href="https://www.linkedin.com/in/gor-arakelyan-7005581a9/"
           >
-            https://www.linkedin.com/in/gor-arakelyan-7005581a9/
+            linkedin
           </Typography>
         </Typography>
       </Typography>
-      {"\n"}
-      {"\n"}
     </>
   );
 };

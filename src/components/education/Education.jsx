@@ -10,34 +10,22 @@ const Education = () => {
         >
           EDUCATION
         </Typography>
-        {"\n"}
-        <Typography
-          component="div"
-          sx={{
-            width: "80%",
-            borderLeft: "2px solid grey",
-          }}
-        >
-          <Typography component="ul" sx={{ width: "100%" }}>
+        <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
+          <Typography component="ul">
             <Typography component="li">
               <strong>2020 / 3 months</strong> (“Programming basics” C++ course,
               Russian-Armenian University and Ministry of High Tech Industry of
               the Republic of Armenia)
             </Typography>
-            {"\n"}
             <Typography component="li">
               <strong>2019 / 6 months</strong> (front-end development courses)
             </Typography>
-            {"\n"}
             <Typography component="li">
               <strong>2012 - 2014</strong> ( Moscow Institute of Linguistics)
             </Typography>
-            {"\n"}
           </Typography>
         </Typography>
       </Typography>
-      {"\n"}
-      {"\n"}
     </>
   );
 };

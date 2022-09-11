@@ -23,76 +23,71 @@ const headingsCss = {
 
 const Main = () => {
   const handleExport = () => {
+    window.scrollTo(0, 0);
     const root = document.getElementById("cv");
-    const content = root?.textContent;
-    const element = document.createElement("a");
-    const file = new Blob([content ?? ""], { type: "text/plain" });
-    element.href = URL.createObjectURL(file);
-    element.download = "Gor_Arakelyan-CV.txt";
-    document.body.appendChild(element); // Required for working in FireFox
-    element.click();
+    const opt = {
+      filename: "Gor_Arakelyan-CV.pdf",
+      pagebreak: { mode: "avoid-all" },
+    };
+    // NOTE: link to PDF transformer CDN => https://ekoopmans.github.io/html2pdf.js/#image-type-and-quality
+    window.html2pdf().set(opt).from(root).save();
   };
 
   return (
-    <Typography component="div" marginTop={2}>
+    <Typography component="div" sx={{ margin: "0 auto", width: "1100px" }}>
       <Button
         size="medium"
-        variant="outlined"
+        variant="contained"
         onClick={handleExport}
-        sx={{ position: "fixed", top: "15px", left: "10px" }}
+        sx={{ position: "fixed", top: "15px", right: "10px" }}
       >
         export file
       </Button>
-      <Typography component="div" marginBottom="30px" id="cv">
+
+      <Typography component="div" marginBottom="30px" id="cv" marginTop={6}>
         <Typography
-          component="div"
           variant="h4"
+          component="div"
           fontWeight={500}
           marginBottom={1}
-          sx={{ width: "1158px", margin: "0 auto" }}
         >
           Arakelyan Gor - web developer
         </Typography>
-        {"\n"}
-        {"\n"}
-        <Typography component="div" sx={{ display: "flex", marginTop: "15px" }}>
+
+        <Typography component="div" sx={{ display: "flex" }}>
           <Typography
             component="div"
-            sx={{ margin: "0 auto", display: "flex" }}
+            sx={{
+              background: "#d3d3d378",
+              width: "500px",
+              padding: "10px",
+            }}
           >
-            <Typography
-              component="div"
-              sx={{ background: "#d3d3d378", width: "400px", padding: "10px" }}
-            >
-              <Avatar />
+            <Avatar />
 
-              <About headingsCss={headingsCss} />
+            <About headingsCss={headingsCss} />
 
-              <Languages headingsCss={headingsCss} />
+            <Languages headingsCss={headingsCss} />
 
-              <Hobbies headingsCss={headingsCss} />
+            <Hobbies headingsCss={headingsCss} />
 
-              <Contacts headingsCss={headingsCss} />
-            </Typography>
+            <Contacts headingsCss={headingsCss} />
+          </Typography>
 
-            <Typography
-              component="div"
-              sx={{ width: "700px", padding: "20px" }}
-            >
-              <Experience />
+          <Typography component="div" padding={3}>
+            <Experience />
 
-              <DottedLine />
+            <DottedLine />
 
-              <Education />
+            <Education />
 
-              <DottedLine />
+            <DottedLine />
 
-              <Duties />
+            <Duties />
 
-              <DottedLine />
+            <DottedLine />
 
-              <Skills />
-            </Typography>
+            <Skills />
           </Typography>
         </Typography>
       </Typography>

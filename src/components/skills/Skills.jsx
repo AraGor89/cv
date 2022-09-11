@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import DottedLine from "./../common/DottedLine";
 
 const Skills = () => {
   const softSkills = [
@@ -7,7 +6,8 @@ const Skills = () => {
     "Patience",
     "Positivity",
     "Accountability",
-    "Problem-Solving",
+    "Problem solving",
+    "Process management",
   ];
   const hardSkills = [
     "HTML",
@@ -22,49 +22,41 @@ const Skills = () => {
     "REST API",
   ];
 
-  return (
-    <Typography component="div" sx={{ marginTop: "20px" }}>
-      <Typography sx={{ fontSize: "20px", color: "grey", marginBottom: "8px" }}>
-        SOFT SKILLS
-      </Typography>
-      {"\n"}
-      <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
-        <Typography component="ul">
-          {softSkills.map((skill) => {
-            return (
-              <Typography component="li" key={skill}>
-                {skill}
-                {"\n"}
-              </Typography>
-            );
-          })}
+  const renderer = (data) => {
+    return data.map((item) => {
+      return (
+        <Typography component="li" key={item}>
+          {item}
         </Typography>
-        {"\n"}
+      );
+    });
+  };
+
+  return (
+    <Typography
+      component="div"
+      justifyContent="flex-start"
+      sx={{ marginTop: "20px", display: "flex" }}
+    >
+      <Typography component="div">
+        <Typography
+          sx={{ fontSize: "20px", color: "grey", marginBottom: "8px" }}
+        >
+          HARD SKILLS
+        </Typography>
+        <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
+          <Typography component="ul">{renderer(hardSkills)}</Typography>
+        </Typography>
       </Typography>
 
-      <DottedLine />
-
-      <Typography
-        sx={{
-          fontSize: "20px",
-          color: "grey",
-          marginTop: "20px",
-          marginBottom: "8px",
-        }}
-      >
-        HARD SKILLS
-      </Typography>
-      {"\n"}
-      <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
-        <Typography component="ul">
-          {hardSkills.map((skill) => {
-            return (
-              <Typography component="li" key={skill}>
-                {skill}
-                {"\n"}
-              </Typography>
-            );
-          })}
+      <Typography component="div" marginLeft={7}>
+        <Typography
+          sx={{ fontSize: "20px", color: "grey", marginBottom: "8px" }}
+        >
+          SOFT SKILLS
+        </Typography>
+        <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
+          <Typography component="ul">{renderer(softSkills)}</Typography>
         </Typography>
       </Typography>
     </Typography>

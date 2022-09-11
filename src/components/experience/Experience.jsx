@@ -9,37 +9,47 @@ const Experience = () => {
       >
         WORK EXPERIENCE
       </Typography>
-      {"\n"}
       <Typography component="div" sx={{ borderLeft: "2px solid grey" }}>
         <Typography component="ul">
           <Typography component="li">
             FREELANCE 2019-2020 (Front-end web developer)
           </Typography>
-          {"\n"}
           <Typography component="li">
-            REDKITE 2020 - present {"\n"}
+            REDKITE 2020 - present.
             <Typography component="ul">
-              {"\t"}
-              <Typography component="i">
-                Automation of hospital workflows. (cypress, react, redux...)
-              </Typography>
-              {"\n"}
-              {"\t"}
+              <i>
+                Worked with "Biopic Medical" (Automation of hospital workflows).
+              </i>
               <Typography component="li">
-                Worked with "Biopic Medical" (Front-end web developer)
+                Front-end web developer (js, react, redux, ...)
               </Typography>
-              {"\n"}
-              {"\t"}
               <Typography component="li">
-                Worked with "Biopic Medical" (Developer in testing)
+                Developer in QA automation (cypress)
               </Typography>
-              {"\n"}
+              <hr />
+              <i>Worked with "Warner Music Group"</i>
+              <Typography component="li">
+                Developer in QA automation (cypress)
+              </Typography>
+              <Typography component="li">
+                <Typography
+                  component="a"
+                  target="_blank"
+                  sx={{ textDecoration: "none" }}
+                  href="https://medium.com/@gorarakelyan1989/100-days-of-quality-assurance-e0e0ff0d6707"
+                >
+                  Wrote an article on the topic "What can be tested ?"
+                </Typography>
+              </Typography>
+              <hr />
+              <i>Working with ITU (International Telecommunication Union)</i>
+              <Typography component="li">
+                Front-end web developer (js, react, redux, ...)
+              </Typography>
             </Typography>
           </Typography>
-          {"\n"}
         </Typography>
       </Typography>
-      {"\n"}
     </Typography>
   );
 };
