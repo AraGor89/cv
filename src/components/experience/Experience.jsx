@@ -18,7 +18,8 @@ const Experience = () => {
             REDKITE 2020 - present.
             <Typography component="ul">
               <i>
-                Worked with "Biopic Medical" (Automation of hospital workflows).
+                {/* Worked with "Biopic Medical" (Automation of hospital workflows). */}
+                Worked in medical field (Automation of hospital workflows).
               </i>
               <Typography component="li">
                 Front-end web developer (js, react, redux, ...)
@@ -27,7 +28,8 @@ const Experience = () => {
                 Developer in QA automation (cypress)
               </Typography>
               <hr />
-              <i>Worked with "Warner Music Group"</i>
+              {/* <i>Worked with "Warner Music Group"</i> */}
+              <i>Worked in music industry</i>
               <Typography component="li">
                 Developer in QA automation (cypress)
               </Typography>
@@ -42,7 +44,8 @@ const Experience = () => {
                 </Typography>
               </Typography>
               <hr />
-              <i>Working with ITU (International Telecommunication Union)</i>
+              {/* <i>Working with ITU (International Telecommunication Union)</i> */}
+              <i>Worked in telecommunication field </i>
               <Typography component="li">
                 Front-end web developer (js, react, redux, ...)
               </Typography>
