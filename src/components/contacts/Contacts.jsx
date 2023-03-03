@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Modal, Tooltip, Typography } from "@mui/material";
+import { Backdrop, Fade, Modal, Tooltip, Typography } from "@mui/material";
+import Mailing from "./Mailing";
 import mail from "../../assets/img/mail.png";
 import phone from "../../assets/img/phone.png";
 import logoLin from "../../assets/img/logoLin.png";
-import Mailing from "./Mailing";
 
 const Contacts = ({ headingsCss }) => {
   const [open, setOpen] = useState(false);
@@ -12,10 +12,22 @@ const Contacts = ({ headingsCss }) => {
 
   return (
     <>
-      <Modal open={open} onClose={handleClose}>
-        <Typography component="div">
-          <Mailing closeModal={handleClose} />
-        </Typography>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: {
+            timeout: 1500,
+          },
+        }}
+      >
+        <Fade in={open}>
+          <Typography component="div">
+            <Mailing closeModal={handleClose} />
+          </Typography>
+        </Fade>
       </Modal>
 
       <Typography variant="h5" sx={headingsCss}>
