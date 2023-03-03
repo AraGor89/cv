@@ -91,7 +91,7 @@ const Mailing = ({ closeModal }) => {
         <TextField
           fullWidth
           required
-          type="text"
+          type="email"
           label="Email"
           margin="dense"
           name="user_email"
