@@ -1,11 +1,23 @@
-import { Typography } from "@mui/material";
+import { useState } from "react";
+import { Modal, Tooltip, Typography } from "@mui/material";
 import mail from "../../assets/img/mail.png";
 import phone from "../../assets/img/phone.png";
 import logoLin from "../../assets/img/logoLin.png";
+import Mailing from "./Mailing";
 
 const Contacts = ({ headingsCss }) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
+      <Modal open={open} onClose={handleClose}>
+        <Typography component="div">
+          <Mailing closeModal={handleClose} />
+        </Typography>
+      </Modal>
+
       <Typography variant="h5" sx={headingsCss}>
         Contact info
       </Typography>
@@ -26,9 +38,23 @@ const Contacts = ({ headingsCss }) => {
 
         <Typography component="div" display="flex" marginBottom={1}>
           <Typography component="img" src={mail} alt="mail" width={30} />
-          <Typography component="span" marginLeft={1}>
-            gorarakelyan1989@gmail.com
-          </Typography>
+          <Tooltip
+            title={
+              <Typography component="span" sx={{ fontSize: "16px" }}>
+                Click for email
+              </Typography>
+            }
+            placement="top-end"
+          >
+            <Typography
+              component="span"
+              marginLeft={1}
+              sx={{ cursor: "pointer" }}
+              onClick={handleOpen}
+            >
+              gorarakelyan1989@gmail.com
+            </Typography>
+          </Tooltip>
         </Typography>
 
         <Typography component="div" display="flex" alignItems="center">
