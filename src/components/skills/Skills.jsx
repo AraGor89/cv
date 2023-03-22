@@ -10,16 +10,18 @@ const Skills = () => {
     "Process management",
   ];
   const hardSkills = [
-    "HTML",
-    "CSS",
     "JavaScript",
     "TypeScript",
     "React",
+    "Next.js",
     "Redux",
-    "Bootstrap",
-    "CYPRESS",
-    "LESS",
     "REST API",
+    "CYPRESS",
+    "HTML",
+    "CSS",
+    "LESS",
+    "Material-UI",
+    "Bootstrap",
   ];
 
   const renderer = (data) => {

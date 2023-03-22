@@ -17,7 +17,8 @@ const Mailing = ({ closeModal }) => {
     width: 400,
     bgcolor: "background.paper",
     boxShadow: 24,
-    p: 4,
+    p: 6,
+    borderRadius: "5px",
   };
 
   const sendEmail = (e) => {
@@ -85,7 +86,7 @@ const Mailing = ({ closeModal }) => {
           type="text"
           margin="dense"
           name="from_name"
-          label="Full name"
+          label="Your name please"
           variant="outlined"
         />
         <TextField
@@ -117,7 +118,12 @@ const Mailing = ({ closeModal }) => {
           label="message"
           variant="outlined"
         />
-        <Button variant="outlined" fullWidth type="submit">
+        <Button
+          variant="outlined"
+          fullWidth
+          type="submit"
+          sx={{ marginTop: "10px" }}
+        >
           Send message
         </Button>
       </Typography>
