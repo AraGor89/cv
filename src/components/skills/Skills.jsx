@@ -27,6 +27,12 @@ const Skills = () => {
 
   const gitList = [
     {
+      projectName: "country-info",
+      url: "https://AraGor89.github.io/country-info",
+      description:
+        "Provides information about countries (REST COUNTRIES free api), such as population, area ,etc..",
+    },
+    {
       projectName: "common-things",
       url: "https://aragor89.github.io/common-things",
       description: `Typical tasks implementation, such as
