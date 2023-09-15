@@ -115,7 +115,7 @@ const Mailing = ({ closeModal }) => {
           type="text"
           margin="dense"
           name="message"
-          label="message"
+          label="Message"
           variant="outlined"
         />
         <Button

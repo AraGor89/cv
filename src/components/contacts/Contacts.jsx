@@ -89,7 +89,7 @@ const Contacts = ({ headingsCss }) => {
           </Typography>
         </Typography>
 
-        <Tooltip
+        {/* <Tooltip
           arrow
           placement="left-start"
           title={
@@ -121,7 +121,7 @@ const Contacts = ({ headingsCss }) => {
               GitHub
             </Typography>
           </Typography>
-        </Tooltip>
+        </Tooltip> */}
       </Typography>
     </>
   );

@@ -22,7 +22,8 @@ const Skills = () => {
     "CSS",
     "LESS",
     "Material-UI",
-    "Bootstrap",
+    // "Bootstrap",
+    "e2e testing",
   ];
 
   const gitList = [
@@ -96,7 +97,7 @@ const Skills = () => {
               </Typography>
             </Tooltip>
           ) : (
-            <Typography component="span">{item}</Typography>
+            <Typography component="span">{item.toLowerCase()}</Typography>
           )}
         </Typography>
       );
@@ -109,7 +110,7 @@ const Skills = () => {
       justifyContent="flex-start"
       sx={{ marginTop: "20px", display: "flex" }}
     >
-      <Typography component="div">
+      {/* <Typography component="div">
         <Typography
           sx={{ fontSize: "20px", color: "grey", marginBottom: "8px" }}
         >
@@ -118,7 +119,7 @@ const Skills = () => {
         <Typography component="ul" sx={{ borderLeft: "2px solid grey" }}>
           {renderer(gitList)}
         </Typography>
-      </Typography>
+      </Typography> */}
 
       <Typography component="div" marginLeft={3}>
         <Typography
