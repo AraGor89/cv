@@ -13,17 +13,20 @@ const Skills = () => {
   const hardSkills = [
     "JavaScript",
     "TypeScript",
+    "node",
     "React",
-    "Next.js",
+    "Next",
+    "mongo db",
+    "mongoose",
     "Redux",
     "REST API",
     "CYPRESS",
+    "e2e testing",
     "HTML",
     "CSS",
     "LESS",
     "Material-UI",
     // "Bootstrap",
-    "e2e testing",
   ];
 
   const gitList = [

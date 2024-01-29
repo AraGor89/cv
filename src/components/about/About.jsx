@@ -7,9 +7,12 @@ const About = ({ headingsCss }) => {
         About me
       </Typography>
       <Typography component="div" sx={{ padding: "10px" }}>
-        After trying myself in different industries, I was introduced to the IT
-        world by my friend and found it really close to me. Since then I enjoy
-        working both on front-end and e2e testing parts.
+        Experienced web developer with proficiency in front-end and a strong
+        foundation in back-end technologies. Skilled in crafting clean
+        interfaces, I bring a creative approach to problem-solving. Committed to
+        staying current with industry trends, I excel in collaborative
+        environments and am eager to contribute to dynamic web development
+        projects.
       </Typography>
     </>
   );
